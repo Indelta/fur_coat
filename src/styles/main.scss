@@ -9,10 +9,17 @@
 @import './helpers/grid';
 @import './helpers/typography';
 @import './helpers/button';
-@import './helpers/form'
+@import './helpers/form';
 
 
-// @import './blocks/header';
+@import './blocks/head';
+@import './blocks/intro';
+@import './blocks/production';
+@import './blocks/desc';
+@import './blocks/calculation';
+@import './blocks/comfort';
+@import './blocks/contacts';
+
 // @import './blocks/main';
 // @import './blocks/contacts';
 // @import './blocks/gallery';
@@ -20,5 +27,5 @@
 // @import './blocks/services';
 // @import './blocks/mobile-menu';
 // @import './blocks/experience';
-// @import './blocks/footer';
+@import './blocks/footer';
 // @import './blocks/modal';

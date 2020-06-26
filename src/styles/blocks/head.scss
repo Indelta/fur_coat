@@ -1,0 +1,71 @@
+.head {
+  padding-top: 37px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 136px;
+    height: 46px;
+  }
+
+  &__middle {
+    display: flex;
+    margin-right: 70px;
+  }
+
+  &__img {
+    width: 36px;
+    height: 34px;
+  }
+
+  &__text {
+    width: 92px;
+    margin-left: 11px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #3C3C62;
+  }
+
+  &__right {
+    display: flex;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__link {
+    margin-right: 20px;
+  }
+
+  &__whatsApp {
+    
+  }
+
+  &__viber {
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__phone {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+  }
+
+  &__btn {
+    margin-top: 7px;
+  }
+}
+
+.header {
+  background: url('../assets/img/jpg/1_bg\ 1.jpg') no-repeat top center / cover;
+}

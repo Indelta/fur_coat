@@ -13,7 +13,7 @@ input, textarea {
 }
 
 body {
-	font-family: $roboto;
+	font-family: $glober;
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
@@ -22,10 +22,18 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 820px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+
+  &--975 {
+    max-width: 975px;
+  }
+
+  &--1420 {
+    max-width: 1420px;
+  }
 
   @include no-desktop {
     padding: 0 20px;

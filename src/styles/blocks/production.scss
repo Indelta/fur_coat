@@ -1,0 +1,40 @@
+.production {
+  
+
+  &__inner {
+    padding: 53px 40px;
+    background: url('../assets/img/jpg/2_bg\ 2.jpg') no-repeat center center / cover;
+    border-radius: 20px;
+    box-shadow: 0px 19px 34px rgba(0, 0, 0, 0.45);
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 820px;
+    width: 100%;
+    margin: 30px auto 0;
+  }
+
+  &__item {
+  }
+
+  &__img {
+    width: 198px;
+    height: 328px;
+  }
+
+  &__desc {
+    display: block;
+    margin-top: 37px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 140%;
+    text-align: center;
+    color: #222222;
+  }
+}
+

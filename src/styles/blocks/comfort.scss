@@ -1,0 +1,52 @@
+.comfort {
+  padding: 44px 75px;
+  background: url('../assets/img/jpg/triangle_img\ 1.png') no-repeat left bottom / contain;
+
+  &__title {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    margin-top: 60px;
+  }
+
+  &__img {
+  }
+
+  &__text {
+    margin-left: 11px;
+    margin-top: 20px;
+    width: 144px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: #474747;
+  }
+
+  &__btn {
+    display: block;
+    margin: 73px auto 0;
+    width: 292.35px;
+    height: 38px;
+  }
+
+  &__link {
+    width: 292.35px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 31px auto 0;
+    background: #FFFFFF;
+    border: 1px solid #474747;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+    border-radius: 30px;
+  }
+}

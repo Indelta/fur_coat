@@ -1,0 +1,205 @@
+.calculatin {
+  background: url('../assets/img/jpg/3_bg\ 1.jpg') no-repeat center center / cover;
+  padding: 43px 0 51px;
+
+  &__title {
+    color: white;
+  }
+
+  &__form {
+    margin-top: 21px;
+  }
+}
+
+.calc {
+  background-color: white;
+  box-shadow: 0px 19px 34px rgba(0, 0, 0, 0.45);
+  border-radius: 50px;
+
+  &__type {
+    padding: 36px 0 21px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: #000000;
+  }
+
+  &__list {
+    max-width: 550px;
+    width: 100%;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child {
+      position: relative;
+
+      &:before {
+        content: 'кол-во';
+        position: absolute;
+        bottom: 12px;
+        left: -50px;
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        color: #575656;
+      }
+    }
+  }
+
+  &__img {
+  }
+
+  &__info {
+    margin-top: 8px;
+  }
+
+  &__inut-number {
+    margin-top: 11px;
+    width: 80px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 20px;
+  }
+
+  &__weight {
+    padding: 16px 0 23px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E0E0E0;
+
+    .calc__title {
+      text-align: start;
+    }
+  }
+
+  &__left {
+    width: 50%;
+  }
+
+  &__input {
+    width: 120px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__select {
+    margin-top: 12px;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 319px;
+    height: 40px;
+    padding-left: 11px;
+  }
+
+  &__cost {
+    padding: 14px 0 24px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  &__cost-wrap {
+    max-width: 450px;
+    justify-content: space-between;
+    margin: 14px auto 0;
+    display: flex;
+  }
+
+  &__viber,
+  &__whatsApp {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 212px;
+    height: 38px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.35);
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__viber {
+    background: linear-gradient(180deg, #CE62DB 0%, #9D3CA9 97.92%);
+  }
+
+  &__whatsApp {
+    background: linear-gradient(180deg, #02B327 0%, #07711D 97.92%);
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 26px;
+    height: 21px;
+    left: 10px;
+  }
+
+  &__phone {
+    padding: 19px 0 12px;
+  }
+
+  &__wrap {
+    max-width: 450px;
+    width: 100%;
+    margin: 18px auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    margin-top: 20px;
+    display: block;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: center;
+    color: #626161;
+  }
+
+  &__input-phone {
+    width: 212px;
+    height: 38px;
+    background: #FFFEFF;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.35);
+    border-radius: 30px;
+    border: none;
+    text-align: center;
+  }
+
+  &__btn {
+  }
+}
+
