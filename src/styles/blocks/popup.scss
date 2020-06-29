@@ -1,0 +1,139 @@
+.popup {
+    display: none;
+
+    &.active {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+
+  &__inner {
+    position: relative;
+    padding: 65px 45px;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 40px;
+    
+  } 
+
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  &__label {
+    display: block;
+    margin-top: 41px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  &__input-phone {
+    display: block;
+    width: 70%;
+    margin: 5px auto 0;
+    height: 38px;
+    background: #FFFEFF;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.35);
+    border-radius: 30px;
+    border: none;
+    text-align: center;
+  }
+
+  &__btn {
+    display: block;
+    width: 70%;
+    margin: 12px auto 0;
+    height: 38px;
+  }
+
+  &__close {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.instruction {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+
+  &.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    overflow: hidden;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 55px 60px 30px;
+    background: white;
+    border-radius: 40px;    
+  }  
+
+  &__title {
+    max-width: 495px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__list {
+    max-width: 624px;
+    width: 100%;
+    margin: 36px auto 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3F3F3F;
+  }
+
+  &__item {
+    margin-top: 5px;
+  }
+
+  &__btn {
+    margin-left: auto;
+    width: 263px;
+    margin-top: 42px;
+    outline: none;
+    border: none;
+  }
+
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+}
+
+
+

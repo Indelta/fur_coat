@@ -2,6 +2,10 @@
   background: url('../assets/img/jpg/3_bg\ 1.jpg') no-repeat center center / cover;
   padding: 43px 0 51px;
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   &__title {
     color: white;
   }
@@ -28,6 +32,10 @@
     line-height: 140%;
     text-align: center;
     color: #000000;
+
+    @include mobile {
+      padding: 0 20px;
+    }
   }
 
   &__list {
@@ -36,10 +44,11 @@
     margin: 20px auto 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__item {
-    display: flex;
+    display: flex;    
     flex-direction: column;
     align-items: center;
 
@@ -55,7 +64,15 @@
         line-height: 140%;
         text-align: center;
         color: #575656;
+
+        @include mobile {
+          display: none;
+        }
       }
+    }
+
+    @include mobile {
+      width: 50%;
     }
   }
 
@@ -64,6 +81,10 @@
 
   &__info {
     margin-top: 8px;
+
+    @include mobile {
+      margin-top: 3px;
+    }
   }
 
   &__inut-number {
@@ -75,6 +96,10 @@
     box-sizing: border-box;
     border-radius: 10px;
     padding-left: 20px;
+
+    @include mobile {
+      margin-top: 3px;
+    }
   }
 
   &__weight {
@@ -86,13 +111,29 @@
     justify-content: space-between;
     border-bottom: 1px solid #E0E0E0;
 
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .calc__title {
       text-align: start;
+
+      @include mobile {
+        text-align: center;
+      }
     }
   }
 
   &__left {
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__input {
@@ -104,10 +145,23 @@
     border-radius: 10px;
     text-align: center;
     margin-top: 12px;
+
+    @include mobile {
+      width:  80%;
+      margin-top: 5px;
+    }
   }
 
   &__right {
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+    }
   }
 
   &__select {
@@ -119,6 +173,11 @@
     width: 319px;
     height: 40px;
     padding-left: 11px;
+
+    @include mobile {
+      width: 80%;
+      margin-top: 5px;
+    }
   }
 
   &__cost {
@@ -127,10 +186,15 @@
   }
 
   &__cost-wrap {
+    display: flex;
     max-width: 450px;
     justify-content: space-between;
     margin: 14px auto 0;
-    display: flex;
+    
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__viber,
@@ -147,6 +211,11 @@
     line-height: 140%;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
+
+    @include mobile {
+      width: 80%;
+    }
   }
 
   &__viber {
@@ -155,10 +224,20 @@
 
   &__whatsApp {
     background: linear-gradient(180deg, #02B327 0%, #07711D 97.92%);
+
+    @include mobile {
+      margin-top: 15px;
+    }
   }
 
   &__radio {
-    display: none;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked {
+      border: 2px solid black;
+    }
   }
 
   &__icon {
@@ -178,6 +257,11 @@
     margin: 18px auto 0;
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__text {
@@ -187,6 +271,10 @@
     line-height: 140%;
     text-align: center;
     color: #626161;
+
+    @include mobile {
+      padding: 0 20px;
+    }
   }
 
   &__input-phone {
@@ -197,9 +285,19 @@
     border-radius: 30px;
     border: none;
     text-align: center;
+
+    @include mobile {
+      width: 80%;
+    }
   }
 
   &__btn {
+
+    @include mobile {
+      width: 80%;
+      height: 38px;
+      margin-top: 15px;
+    }
   }
 }
 

@@ -11,6 +11,10 @@
     display: flex;
     color: white;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -30,6 +34,10 @@
   }
 
   &__right {
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 
   &__item {    

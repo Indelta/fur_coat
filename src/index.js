@@ -2,6 +2,9 @@ import * as $ from 'jquery';
 import './styles/main.scss';
 import Swiper from 'swiper';
 import AOS from 'aos';
+import showPopup from './js/stiker';
+import formSender from './js/formSender';
+
 
 // import './js/header.js';
 // import './js/mobile-menu.js';
@@ -10,29 +13,28 @@ import AOS from 'aos';
 // import './js/scrollBlock';
 
 document.addEventListener('DOMContentLoaded', function() {
-    var mySwiper = new Swiper('.swiper-container', { 
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        slidesPerView: 1,
-        breakpoints: {
-            1300: {
-              slidesPerView: 2,
-            }
-          },
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-    });
+  showPopup();
+
+  document.querySelector('.popup__btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    formSender(document.querySelector('.popup__inner'));
+  })
+
+
+  const mySwiper = new Swiper(".swiper-container", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 15,
+    breakpoints: {
+      1600: {
+        slidesPerView: 1.4,
+        spaceBetween: 20,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
     AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function

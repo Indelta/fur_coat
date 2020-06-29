@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bel-cargo</title>
 </head>
 <body>
     <header class="header">
@@ -19,12 +19,12 @@
                         <ul class="head__social">
                             <li class="head__link">
                                 <a href="" class="head__whatsApp">
-                                    <img src="./assets/img/svg/whatsapp.svg" alt="" class="head__img">
+                                    <img src="./assets/img/svg/whatsapp.svg" alt="" class="head__ico">
                                 </a>
                             </li>
                             <li class="head__link">
                                 <a href="" class="head__viber">
-                                    <img src="./assets/img/svg/Viber_icon.svg" alt="" class="head__img">
+                                    <img src="./assets/img/svg/Viber_icon.svg" alt="" class="head__ico">
                                 </a>
                             </li>
                         </ul>
@@ -66,14 +66,69 @@
             <div class="container container--1420">
                 <div class="production__inner">
                     <span class="production__title title">Какие изделия мы доставляем:</span>
-                    <ul class="production__list">
+                    <ul class="production__list ">
                         <li class="production__item"><img src="./assets/img/jpg/shuba 1.png" alt="" class="production__img"><span class="production__desc">Шубы</span></li>
                         <li class="production__item"><img src="./assets/img/jpg/dublenka 1.jpg" alt="" class="production__img"><span class="production__desc">Дубленки</span></li>
                         <li class="production__item"><img src="./assets/img/jpg/Jilet 1.jpg" alt="" class="production__img"><span class="production__desc">Меховые жилеты</span></li>
                         <li class="production__item"><img src="./assets/img/jpg/palto 1.jpg" alt="" class="production__img"><span class="production__desc">Пальто с мехом</span></li>
                     </ul>
-                </div>
+                    <div class="production__stiker stiker">
+                        <img src="./assets/img/png/icon_1.png" alt="" class="stiker__img">
+                        <p class="stiker__text">КИЗ: инструкция по подготовке информации</p>
+                    </div> 
+                </div>              
             </div>
+        </section>
+        <section class="production mobile">
+            <div class="container container--1420">
+                <div class="production__inner">
+                    <span class="production__title title">Какие изделия мы доставляем:</span>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <li class="production__item swiper-slide"><img src="./assets/img/jpg/shuba 1.png" alt="" class="production__img"><span class="production__desc">Шубы</span></li>
+                        <li class="production__item swiper-slide"><img src="./assets/img/jpg/dublenka 1.jpg" alt="" class="production__img"><span class="production__desc">Дубленки</span></li>
+                        <li class="production__item swiper-slide"><img src="./assets/img/jpg/Jilet 1.jpg" alt="" class="production__img"><span class="production__desc">Меховые жилеты</span></li>
+                        <li class="production__item swiper-slide"><img src="./assets/img/jpg/palto 1.jpg" alt="" class="production__img"><span class="production__desc">Пальто с мехом</span></li>                        
+                    </div>  
+                    <div class="swiper-pagination"></div>               
+                </div>
+                <div class="production__stiker stiker">
+                    <img src="./assets/img/png/icon_1.png" alt="" class="stiker__img">
+                    <p class="stiker__text">КИЗ: инструкция по подготовке информации</p>
+                </div> 
+                </div>                
+            </div>
+        </section>
+        <section class="popup">
+            <form class="popup__inner">
+                <p class="popup__title">Получите подробную инструкцию
+                    по подготовке информации для КИЗ</p>
+                <span class="popup__label">Введите Ваш номер телефона:</span>
+                <input type="text" class="popup__input-phone" name='phone'>
+                <button class="popup__btn btn">Получить инструкцию ›
+                </button>
+                <img src="./assets/img/jpg/cross.jpg" alt="" class="popup__close">
+            </form>            
+        </section>
+        <section class="instruction">
+            <div class="instruction__inner">
+                <p class="instruction__title">
+                    Краткая инструкция по требованиям, предъявляемым к оформлению з 
+                </p>
+                <ol class="instruction__list">
+                    <li class="instruction__item">1. Фото-файлов изделий должно быть столько, сколько строк в Инвойсе</li>
+                    <li class="instruction__item">2. Наименование фото-файла должно быть названо строго по номеру строки в Инвойсе начиная с
+                        номера 01 и т.д. Никакой дополнительной информации писать не нужно</li>
+                    <li class="instruction__item">3. Важно! Фото-файлы должны иметь расширение исключительно .jpeg. Фотографии в
+                        файл excel прикреплять не нужно!</li>
+                    <li class="instruction__item">4. Наименование товара необходимо указывать в единственном числе. Пример: Куртка кожаная
+                        мужская. Подкладка из овчины, капюшона - мех енота. Размер 50 см, обхват груди 100 см, обхват талии 88 см. (При оформлении документа соблюдать правила орфографии, а также правило применения прописных и строчных букв).</li>
+                </ol>
+                <button class="instruction__btn btn">Скачать пример
+                    <img src="./assets/img/png/icon_load.png" alt="" class="instruction__img">
+                </button>
+                <img src="./assets/img/jpg/cross.jpg" alt="" class="instruction__close">
+            </div>            
         </section>
         <section class="desc">
             <div class="container container--975">
@@ -158,23 +213,23 @@
                                <img src="./assets/img/jpg/shubu_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Шубы</span>
                                <input type="number" class="calc__inut-number" name='
-                               fur-coats'>
+                               fur-coats' min="0" max="999">
                            </li>
                            <li class="calc__item">
                                <img src="./assets/img/jpg/dublenki_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Дубленки</span>
                                <input type="number" class="calc__inut-number" name='
-                               sheepskin-coats'>
+                               sheepskin-coats' min="0" max="999">
                            </li>
                            <li class="calc__item">
                                <img src="./assets/img/jpg/jiletu_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Меховые желеты</span>
-                               <input type="number" class="calc__inut-number" name='fur-vests'>
+                               <input type="number" class="calc__inut-number" name='fur-vests' min="0" max="999">
                            </li>
                            <li class="calc__item">
                                <img src="./assets/img/jpg/palto_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Пальто с мехом</span>
-                               <input type="number" class="calc__inut-number" name='coat-with-fur'>
+                               <input type="number" class="calc__inut-number" name='coat-with-fur' min="0" max="999">
                            </li>
                        </ul>
                    </div>
@@ -204,12 +259,12 @@
                         <label for="" class="calc__viber">
                             <img src="./assets/img/png/manager_icon 1.png" alt="" class="calc__icon">
                             Звонок менеджера
-                            <input type="radio" class="calc__radio" name='messager'>
+                            <input type="radio" class="calc__radio" name='messager' value='viber'>
                         </label>
                         <label for="" class="calc__whatsApp">
                             <img src="./assets/img/svg/whatsapp.svg" alt="" class="calc__icon">
                             WhatsApp
-                         <input type="radio" class="calc__radio" name='messager'>
+                         <input type="radio" class="calc__radio" name='messager' value='whatsApp' checked>
                      </label>
                        </div>                       
                    </div> 

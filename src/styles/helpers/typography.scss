@@ -27,4 +27,8 @@ input, select, textarea, button {
     line-height: 140%;
     text-align: center;
     color: #222222;
+
+    @include mobile {
+      font-size: 22px;
+    }
   }
