@@ -197,12 +197,43 @@
     }
   }
 
+  &__wrap-radio {
+    position: relative;
+
+    @include mobile {
+      width: 80%;
+    }
+
+  //   & input[type=radio] {
+  //     display: none;
+  //   }
+
+  //   & label {
+  //     display: inline-block;
+  //     cursor: pointer;
+  //     padding: 0px 15px;
+  //     line-height: 34px;
+  //     border: 1px solid #999;
+  //     border-radius: 6px;
+  //     user-select: none;
+  //   }
+
+  //   & input[type=radio]:checked + label {
+  //     background: #ffe0a6;
+  //   }
+
+  //   & label:hover {
+  //     color: #666;
+  //   }
+  }
+
+
   &__viber,
   &__whatsApp {
     display: flex;
-    position: relative;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
     width: 212px;
     height: 38px;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.35);
@@ -212,18 +243,26 @@
     text-align: center;
     color: #FFFFFF;
     cursor: pointer;
-
-    @include mobile {
-      width: 80%;
-    }
   }
 
   &__viber {
     background: linear-gradient(180deg, #CE62DB 0%, #9D3CA9 97.92%);
+    @include transition;
+
+    &:hover {
+      background: linear-gradient(180deg, #CE62DB 0%, #EE65FF 97.92%);
+      box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.35);
+    }
   }
 
   &__whatsApp {
     background: linear-gradient(180deg, #02B327 0%, #07711D 97.92%);
+    @include transition;
+
+    &:hover {
+      background: linear-gradient(180deg, #02B327 0%, #13D93D 97.92%);
+      box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.35);
+    }
 
     @include mobile {
       margin-top: 15px;
@@ -231,12 +270,15 @@
   }
 
   &__radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
+    display: none;
+    &:checked + .calc__whatsApp {
+      background: linear-gradient(180deg, #02B327 0%, #13D93D 97.92%);
+      box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.55);
+    }
 
-    &:checked {
-      border: 2px solid black;
+    &:checked + .calc__viber {
+      background: linear-gradient(180deg, #CE62DB 0%, #EE65FF 97.92%);
+      box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.55);
     }
   }
 
@@ -245,6 +287,9 @@
     width: 26px;
     height: 21px;
     left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
   }
 
   &__phone {

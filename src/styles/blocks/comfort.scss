@@ -72,9 +72,24 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
     border-radius: 30px;
+    @include transition;
+
+    &:hover {
+      border: 1px solid #2796E3;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+      color: #2492DE;
+    }
+
+    &:active {
+      border: 1px solid #2492DE;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
+      color: #2492DE;
+    }
 
     @include mobile {
-      margin-top: 20px;
+      margin-top: 20px;      
     }
   }
 }

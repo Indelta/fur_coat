@@ -1,7 +1,8 @@
 export default function showPopup () {
   const stiker = document.querySelector('.stiker'); 
   const popup = document.querySelector('.popup');
-  const closeBtn = document.querySelector('.popup__close'); 
+  const instruction = document.querySelector('.instruction');
+  const closeBtn = document.querySelectorAll('#close'); 
   const body = document.querySelector('body');
 
 
@@ -10,8 +11,13 @@ export default function showPopup () {
     body.style.overflow = 'hidden';
   })
 
-  closeBtn.addEventListener('click', () => {
+
+closeBtn.forEach( (el) => {
+  el.addEventListener('click', () => {
     popup.classList.remove('active');
+    instruction.classList.remove('active');
     body.style.overflow = 'auto';
   })
+})
+
 }

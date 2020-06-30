@@ -4,6 +4,8 @@ import Swiper from 'swiper';
 import AOS from 'aos';
 import showPopup from './js/stiker';
 import formSender from './js/formSender';
+import scrollManager from './js/scrollManager';
+import Inputmask from "inputmask";
 
 
 // import './js/header.js';
@@ -14,6 +16,7 @@ import formSender from './js/formSender';
 
 document.addEventListener('DOMContentLoaded', function() {
   showPopup();
+  scrollManager();
 
   document.querySelector('.popup__btn').addEventListener('click', (e) => {
     e.preventDefault();
@@ -57,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
       anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     
     });
+
+    const inputs = document.querySelectorAll("#id-phone");
+    const im = new Inputmask({ mask: "+9 (999) 999-99-99[9]" });
+    im.mask(inputs); 
  }, false);
 
 

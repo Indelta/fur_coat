@@ -1,0 +1,31 @@
+.thankyou {
+  padding: 115px 0 120px;
+  display: none;
+
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 420px;
+    width: 100%;      
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bel-cargo</title>
+    <title>bel-cargo</title>
 </head>
 <body>
     <header class="header">
-        <section class="head">
+        <section class="head" id="head">
             <div class="container">
                 <div class="head__inner">
                     <img src="./assets/img/png/Logo 1.png" alt="" class="head__logo">
@@ -50,7 +50,7 @@
                         <span class="present__title">Дарим скидку 30$ на первый заказ</span>
                         <p class="present__desc">Скидка будет забранирована на ваш номер телефона (действительна в течении 3 месяцев)</p>
                         <span class="present__subtitle">Введите ваш номер телефона:</span>
-                        <input type="text" class="present__input" name="phone">
+                        <input type="text" class="present__input" id="id-phone" name="phone">
                         <button class="present__btn btn">Забронировать скидку &#8250;</button>
                         <p class="present__text">Скидка действует при общей сумме заказа от 200$</p>
                         <div class="present__until">  
@@ -104,10 +104,10 @@
                 <p class="popup__title">Получите подробную инструкцию
                     по подготовке информации для КИЗ</p>
                 <span class="popup__label">Введите Ваш номер телефона:</span>
-                <input type="text" class="popup__input-phone" name='phone'>
+                <input type="text" class="popup__input-phone" name='phone' id="id-phone">
                 <button class="popup__btn btn">Получить инструкцию ›
                 </button>
-                <img src="./assets/img/jpg/cross.jpg" alt="" class="popup__close">
+                <img src="./assets/img/jpg/cross.jpg" alt="" class="popup__close" id='close'>
             </form>            
         </section>
         <section class="instruction">
@@ -124,10 +124,10 @@
                     <li class="instruction__item">4. Наименование товара необходимо указывать в единственном числе. Пример: Куртка кожаная
                         мужская. Подкладка из овчины, капюшона - мех енота. Размер 50 см, обхват груди 100 см, обхват талии 88 см. (При оформлении документа соблюдать правила орфографии, а также правило применения прописных и строчных букв).</li>
                 </ol>
-                <button class="instruction__btn btn">Скачать пример
+                <a href='' class="instruction__btn btn">Скачать пример
                     <img src="./assets/img/png/icon_load.png" alt="" class="instruction__img">
-                </button>
-                <img src="./assets/img/jpg/cross.jpg" alt="" class="instruction__close">
+                </a>
+                <img src="./assets/img/jpg/cross.jpg" alt="" class="instruction__close" id='close'>
             </div>            
         </section>
         <section class="desc">
@@ -256,22 +256,28 @@
                    <div class="calc__cost">
                        <span class="calc__title">4.Выберите способ получения стоимости:</span>
                        <div class="calc__cost-wrap">
-                        <label for="" class="calc__viber">
-                            <img src="./assets/img/png/manager_icon 1.png" alt="" class="calc__icon">
-                            Звонок менеджера
-                            <input type="radio" class="calc__radio" name='messager' value='viber'>
-                        </label>
-                        <label for="" class="calc__whatsApp">
-                            <img src="./assets/img/svg/whatsapp.svg" alt="" class="calc__icon">
-                            WhatsApp
-                         <input type="radio" class="calc__radio" name='messager' value='whatsApp' checked>
-                     </label>
-                       </div>                       
+                        <div class="calc__wrap-radio">
+                         <img src="./assets/img/png/manager_icon 1.png" alt="" class="calc__icon">
+                         <input id="radio-1" type="radio" class="calc__radio" name='messager' value='viber' checked>
+                         <label for="radio-1" class="calc__viber">
+                         Звонок менеджера                     
+                         </label>
+
+                        </div>                        
+                     <div class="calc__wrap-radio">
+                         <img src="./assets/img/svg/whatsapp.svg" alt="" class="calc__icon">
+                         <input id="radio-2" type="radio" class="calc__radio" name='messager' value='whatsApp' >
+                         <label for="radio-2" class="calc__whatsApp">   WhatsApp</label>                            
+
+
+                     </div>
+                     
+                    </div>                        
                    </div> 
                    <div class="calc__phone">
                        <span class="calc__title">5.Введите ваш номер телефона:</span>
                        <div class="calc__wrap">
-                           <input type="text" class="calc__input-phone" name='phone'>
+                           <input type="text" class="calc__input-phone" id="id-phone" name='phone'>
                            <button class="calc__btn btn">Забронировать скидку ›
                         </button>
                        </div>
@@ -343,7 +349,7 @@
         <div class="container">
             <div class="footer__inner">
                 <img src="./assets/img/png/Logo 1.png" alt="" class="footer__logo">
-                <div class="footer__arrow">&uarr;
+                <div class="footer__arrow" data-scroll='head'>&uarr;
                     <span>вверх</span>
                 </div>
                 <div class="footer__contacts">
@@ -353,5 +359,12 @@
             </div>
         </div>
     </footer>
+    <section class="thankyou">
+        <div class="thankyou__inner">
+            <p class="thankyou__title">Спасибо за заявку!</p>
+            <p class="thankyou__subtitle"></p>
+            <img src="" alt="" class="thankyou__close">
+        </div>
+    </section>
 </body>
 </html>

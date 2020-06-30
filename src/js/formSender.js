@@ -7,8 +7,5 @@ export default function formSender (form) {
   popup.classList.remove('active');
   body.style.overflow = 'auto';
 
-  instruction.classList.add('active');
-
-
-  
+  instruction.classList.add('active');  
 }
