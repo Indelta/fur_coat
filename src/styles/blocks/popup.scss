@@ -12,7 +12,6 @@
       justify-content: center;
       align-items: center;
       background: rgba(0, 0, 0, 0.5);
-      overflow: hidden;
     }
 
   &__inner {
@@ -23,6 +22,11 @@
     margin: 0 auto;
     background-color: white;
     border-radius: 40px;
+
+    @include mobile {
+      padding: 40px 20px 20px;
+      border-radius: 20px;
+    }
     
   } 
 
@@ -85,15 +89,19 @@
     z-index: 2;
     display: flex;
     justify-content: center;
-    align-items: center;    
-    overflow: hidden;
+    align-items: center;  
+    overflow-y: auto;
   }
 
   &__inner {
     position: relative;
     padding: 55px 60px 30px;
     background: white;
-    border-radius: 40px;    
+    border-radius: 40px; 
+    
+    @include mobile {
+      padding: 20px;
+    }
   }  
 
   &__title {
@@ -135,6 +143,30 @@
     right: 15px;
     top: 15px;
     cursor: pointer;
+  }
+}
+
+input[name='phone'] {
+  &.animate {
+    animation-name: example;
+    animation-duration: 0.7s;
+    @keyframes example {
+      0% {
+        border: 3px solid transparent;
+        border-radius: 30px;
+        // barder: 2px solid transparent;
+      }
+      50% {
+        border: 3px solid red;
+        border-radius: 30px;
+        // barder: 2px solid $primary-color;
+      }
+      100% {
+        border: 3px solid transparent;
+        border-radius: 30px;
+        // barder: 2px solid transparent;
+      }
+    }
   }
 }
 

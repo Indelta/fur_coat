@@ -30,7 +30,7 @@
                         </ul>
                         <div class="head__contact">
                             <a href="tel:+7 123 456 78" class="head__phone">+7 123 456 78</a>
-                            <button class="head__btn btn">Задать вопрос</button>
+                            <button class="head__btn btn" id='question'>Задать вопрос</button>
                         </div>
                     </div>
                 </div>                
@@ -46,7 +46,7 @@
                         <li class="intro__item">Присваиваем КИЗ</li>
                         <li class="intro__item">Несем финансовые гарантии</li>
                     </ul>
-                    <form action="" class="intro__form present">
+                    <form action="" class="intro__form present" id='sale'>
                         <span class="present__title">Дарим скидку 30$ на первый заказ</span>
                         <p class="present__desc">Скидка будет забранирована на ваш номер телефона (действительна в течении 3 месяцев)</p>
                         <span class="present__subtitle">Введите ваш номер телефона:</span>
@@ -105,8 +105,7 @@
                     по подготовке информации для КИЗ</p>
                 <span class="popup__label">Введите Ваш номер телефона:</span>
                 <input type="text" class="popup__input-phone" name='phone' id="id-phone">
-                <button class="popup__btn btn">Получить инструкцию ›
-                </button>
+                <input class="popup__btn btn" type='submit' value='Получить инструкцию ›'>                
                 <img src="./assets/img/jpg/cross.jpg" alt="" class="popup__close" id='close'>
             </form>            
         </section>
@@ -124,7 +123,7 @@
                     <li class="instruction__item">4. Наименование товара необходимо указывать в единственном числе. Пример: Куртка кожаная
                         мужская. Подкладка из овчины, капюшона - мех енота. Размер 50 см, обхват груди 100 см, обхват талии 88 см. (При оформлении документа соблюдать правила орфографии, а также правило применения прописных и строчных букв).</li>
                 </ol>
-                <a href='' class="instruction__btn btn">Скачать пример
+                <a href='./assets/example/example.xls' class="instruction__btn btn">Скачать пример
                     <img src="./assets/img/png/icon_load.png" alt="" class="instruction__img">
                 </a>
                 <img src="./assets/img/jpg/cross.jpg" alt="" class="instruction__close" id='close'>
@@ -201,7 +200,7 @@
         </section>
     </header>
     <main class="main">
-        <section class="calculatin">
+        <section class="calculatin" id='calculation'>
             <div class="container">
                 <span class="calculatin__title title">Рассчитайте стоимость доставки <br>
                     вашего заказа</span>
@@ -278,8 +277,7 @@
                        <span class="calc__title">5.Введите ваш номер телефона:</span>
                        <div class="calc__wrap">
                            <input type="text" class="calc__input-phone" id="id-phone" name='phone'>
-                           <button class="calc__btn btn">Забронировать скидку ›
-                        </button>
+                           <input type='submit' class="calc__btn btn" value='Забронировать скидку ›'>                        
                        </div>
                        <span class="calc__text">После расчета стоимости с вами свяжется наш менеджер по выбранному способу связи</span>
                    </div>
@@ -316,8 +314,8 @@
                         <p class="comfort__text">Вы забираете свой заказ на нашем складе в Москве или мы отправляем его по вашему адресу в любой город РФ	</p>
                     </li>
                 </ul>
-                <button class="comfort__btn btn">Рассчитать стоимость доставки</button>
-                <a href="" class="comfort__link">Получить скидку 30$ на доставку</a>
+                <button class="comfort__btn btn" data-scroll='calculation'>Рассчитать стоимость доставки</button>
+                <a href="" class="comfort__link" data-scroll='sale'>Получить скидку 30$ на доставку</a>
             </div>
         </section>
         <section class="contacts">
@@ -354,7 +352,7 @@
                 </div>
                 <div class="footer__contacts">
                     <a href="tel:+7 123 456 78" class="footer__phone">+7 123 456 78</a>
-                    <button class="footer__btn btn">Задать вопрос</button>
+                    <button class="footer__btn btn" id='question'>Задать вопрос</button>
                 </div>
             </div>
         </div>
@@ -363,8 +361,17 @@
         <div class="thankyou__inner">
             <p class="thankyou__title">Спасибо за заявку!</p>
             <p class="thankyou__subtitle"></p>
-            <img src="" alt="" class="thankyou__close">
+            <img src="./assets/img/png/close-white.png" alt="" class="thankyou__close" id='close'>
         </div>
+    </section>
+    <section class="question">
+        <form class="question__inner">
+            <p class="question__title">Вы можете задать  интересующий Вас вопрос</p>
+            <span class="question__subtitle">Введите ваш номер телефона:</span>
+            <input type="text" class="question__input" id="id-phone" name="phone">
+            <input type="submit" class="question__btn btn" value='Задать вопрос'>
+            <img src="./assets/img/jpg/cross.jpg" alt="" class="question__close" id='close'>
+        </form>
     </section>
 </body>
 </html>

@@ -3,8 +3,12 @@ import './styles/main.scss';
 import Swiper from 'swiper';
 import AOS from 'aos';
 import showPopup from './js/stiker';
-import formSender from './js/formSender';
+import instructionForm from './js/formSender';
+import discountForm  from './js/discountForm';
+import calcForm  from './js/calcForm';
+import questionForm from './js/qustionForm';
 import scrollManager from './js/scrollManager';
+import askQuestion from './js/question';
 import Inputmask from "inputmask";
 
 
@@ -13,16 +17,33 @@ import Inputmask from "inputmask";
 // import './js/scroll.js';
 // import './js/modal.js';
 // import './js/scrollBlock';
+console.log(instructionForm)
 
 document.addEventListener('DOMContentLoaded', function() {
   showPopup();
   scrollManager();
+  askQuestion();
 
   document.querySelector('.popup__btn').addEventListener('click', (e) => {
+    console.log(1);
     e.preventDefault();
-    formSender(document.querySelector('.popup__inner'));
-  })
+    instructionForm(document.querySelector('.popup__inner'));
+  });
 
+  document.querySelector('.present__btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    discountForm(document.querySelector('.present'));
+  });
+
+  document.querySelector('.calc__btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    calcForm(document.querySelector('.calc'));
+  });
+
+  document.querySelector('.question__btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    questionForm(document.querySelector('.question__inner'));
+  });
 
   const mySwiper = new Swiper(".swiper-container", {
     slidesPerView: "auto",

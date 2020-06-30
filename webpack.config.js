@@ -75,24 +75,9 @@ const optimizationImg = () => {
       options: {
         mozjpeg: {
           progressive: true,
-          quality: 65
+          quality: 65,
         },
-        // optipng.enabled: false will disable optipng
-        optipng: {
-          enabled: false,
-        },
-        pngquant: {
-          quality: [0.65, 0.90],
-          speed: 4
-        },
-        gifsicle: {
-          interlaced: false,
-        },
-        // the webp option will enable WEBP
-        webp: {
-          quality: 75
-        }
-      }
+      },
     };
   }
   return config;
@@ -116,6 +101,12 @@ module.exports = {
   devServer: {
     port: 8081,
     hot: isDev,
+    contentBase: path.join(__dirname, "src"),
+    proxy: {
+      "/send.php": {
+        target: "http://localhost/fur_coat/dist/send.php",
+      },
+    },
   },
   plugins: [
     new HTMLWebpackPlugin({
@@ -129,6 +120,10 @@ module.exports = {
       {
         from: path.resolve(__dirname, "src/assets/img"),
         to: path.resolve(__dirname, "dist/assets/img"),
+      },
+      {
+        from: path.resolve(__dirname, "src/send.php"),
+        to: path.resolve(__dirname, "dist/"),
       },
     ]),
     new MiniCssExtractPlugin({
