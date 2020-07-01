@@ -145,12 +145,20 @@
     border-radius: 10px;
     text-align: center;
     margin-top: 12px;
+    -webkit-appearance: none;   
 
     @include mobile {
       width:  80%;
       margin-top: 5px;
     }
   }
+
+  &__input::-webkit-outer-spin-button,
+  &__input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 
   &__right {
     width: 50%;
@@ -228,21 +236,21 @@
   }
 
   &__viber {
-    background: linear-gradient(180deg, #CE62DB 0%, #9D3CA9 97.92%);
+    background: linear-gradient(186deg, rgba(215,215,215,1) 0%, rgba(144,144,144,1) 100%);
     @include transition;
 
     &:hover {
-      background: linear-gradient(180deg, #CE62DB 0%, #EE65FF 97.92%);
+      opacity: .8;
       box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.35);
     }
   }
 
   &__whatsApp {
-    background: linear-gradient(180deg, #02B327 0%, #07711D 97.92%);
+    background: linear-gradient(186deg, rgba(215,215,215,1) 0%, rgba(144,144,144,1) 100%);
     @include transition;
 
     &:hover {
-      background: linear-gradient(180deg, #02B327 0%, #13D93D 97.92%);
+      opacity: .8;
       box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.35);
     }
 
@@ -279,7 +287,7 @@
   }
 
   &__wrap {
-    max-width: 450px;
+    max-width: 510px;
     width: 100%;
     margin: 18px auto 0;
     display: flex;
@@ -326,5 +334,26 @@
       margin-top: 15px;
     }
   }
+}
+
+input[type='number'] {
+  font-size: 26px;
+  line-height: 140%;
+  text-align: center;
+  color: #575656;
+}
+
+select {
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: #575656;
+}
+
+input[name='phone'] {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #575656;
 }
 

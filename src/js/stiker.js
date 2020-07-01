@@ -17,8 +17,7 @@ export default function showPopup () {
     })
 
     window.addEventListener( 'scroll', (event) => {
-      console.log(pageYOffset);
-      if( pageYOffset > 850 ) {
+      if( pageYOffset > 900 ) {
         el.classList.add('active');
       } else {
         el.classList.remove('active');

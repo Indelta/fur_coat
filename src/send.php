@@ -22,9 +22,9 @@
     $mes .= "<p>email: $email</p>";
  
     $to = "deltaplanirovanie@gmail.com, deltastream.dev@gmail.com, manager.deltaplan@gmail.com";
-    $sub = "=?utf-8?B?" . base64_encode("Заявка с сargo-buyer.com") . '?=';
+    $sub = "=?utf-8?B?" . base64_encode("Заявка с bel-cargo.ru") . '?=';
     $headers = "Content-type: text/html; charset=utf-8 \r\n";
-    $headers .= "From: cargo-buyer.ru/\r\n";
+    $headers .= "From: bel-cargo.ru/\r\n";
     
     mail("$to", "$sub", "$mes", "$headers");
     // sms($_POST['phone'], '375296486172');

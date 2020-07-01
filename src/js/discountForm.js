@@ -1,15 +1,25 @@
 import showThankYou from './showThankyou';
 import disableScroll from './disableScroll';
+import formSender from './formSender';
 
 export default function discountForm (form) {
   const phone = form.querySelector('input[name="phone"]').value;
+  const formData = new FormData(form);
 
   if (!phone || phone.length < 1) {
     validForm(document.querySelector('.present__input'));
   } else {
-    document.querySelector('.thankyou__subtitle').innerHTML = 'Скидка забронирована на ваш номер телефона на 3 месяца';
-    showThankYou();
-    disableScroll();
+    formSender(formData, './send.php')
+    .then((response) => {
+      console.log(response);
+      document.querySelector('.thankyou__subtitle').innerHTML = 'Скидка забронирована на ваш номер телефона на 3 месяца';
+      showThankYou();
+      disableScroll();
+    })
+    .catch((er) => {
+      console.log(er)
+    }     
+   );    
   }
 }
 

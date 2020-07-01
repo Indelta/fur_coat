@@ -1,5 +1,4 @@
-.production {
-  
+.production {  
   display: block;
   @include mobile {
     display: none;
@@ -59,7 +58,7 @@
 
   &__desc {
     display: block;
-    margin-top: 37px;
+    margin-top: 10px;
     font-weight: 700;
     font-size: 21px;
     line-height: 140%;
@@ -114,7 +113,6 @@
 }
 
 .stiker {
-
   &__text {
     margin-top: 10px;
     text-align: center;

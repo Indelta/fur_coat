@@ -22,7 +22,6 @@
 
   &__middle {
     display: flex;
-    margin-right: 70px;
 
     @include mobile {
       margin-right: 0;
@@ -116,8 +115,9 @@
 
 .header {
   position: relative;
-  background: url('../assets/img/jpg/1_bg\ 1.jpg') no-repeat,
-  url('../assets/img/jpg/girl_2\ 1.png') bottom right no-repeat;
+  background: url('../assets/img/jpg/girl_2\ 1.png') bottom right no-repeat,
+              url('../assets/img/jpg/1_bg\ 1.jpg') no-repeat;
+
 
   @include mobile {
     background: url('../assets/img/jpg/1_bg\ 1.jpg') no-repeat center -190px / cover;

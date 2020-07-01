@@ -37,7 +37,7 @@
     @include mobile {
       display: block;
       text-align: center;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 24px;
     }
   }
@@ -193,6 +193,7 @@
   }
 
   &__until {
+    width: 116px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -220,14 +221,16 @@
     font-weight: bold;
     line-height: 17px;
     color: #000000;
-    text-align: end;
+    text-align: center;
   }
 
   &__until-date {
+    display: block;
     font-weight: bold;
     font-size: 17px;
     line-height: 20px;
     color: #EA1E1E;
+    text-align: center;
   }
 }
 

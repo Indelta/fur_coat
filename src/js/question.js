@@ -7,6 +7,7 @@ export default function askQuestion() {
   btns.forEach((el) => {
     el.addEventListener('click', () => {
       questionPopup.classList.add('active');
+      document.querySelector('.question__textarea').focus();
       disableScroll();
     })
   })

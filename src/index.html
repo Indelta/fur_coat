@@ -19,7 +19,7 @@
                         <ul class="head__social">
                             <li class="head__link">
                                 <a href="" class="head__whatsApp">
-                                    <img src="./assets/img/svg/whatsapp.svg" alt="" class="head__ico">
+                                    <img src="./assets/img/svg/whatsapp-green.svg" alt="" class="head__ico">
                                 </a>
                             </li>
                             <li class="head__link">
@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="intro__inner">
                     <span class="intro__title">Продаете меховые изделия?</span>
-                    <div class="intro__subtitle">Доставим и растаможим ваши товары за 3-5 дней</div>
+                    <div class="intro__subtitle">Доставим и растаможим ваши товары за&nbsp;3&#8209;5&nbsp;дней</div>
                     <ul class="intro__list">
                         <li class="intro__item">Доставляем из Италии, Греции, Турции и Китая</li>
                         <li class="intro__item">Присваиваем КИЗ</li>
@@ -55,7 +55,7 @@
                         <p class="present__text">Скидка действует при общей сумме заказа от 200$</p>
                         <div class="present__until">  
                             <span class="present__until-text">Только до </span>
-                            <span class="present__until-date">03. 07. 2020</span>                          
+                            <span class="present__until-date"></span>                          
                         </div>
                     </form>
                     <img src="./assets/img/png/1_girl 1.png" alt="" class="intro__img">
@@ -105,14 +105,15 @@
                     по подготовке информации для КИЗ</p>
                 <span class="popup__label">Введите Ваш номер телефона:</span>
                 <input type="text" class="popup__input-phone" name='phone' id="id-phone">
-                <input class="popup__btn btn" type='submit' value='Получить инструкцию ›'>                
+                <input class="popup__btn btn" type='submit' value='Получить инструкцию ›'>   
+                <p class="popup__text">Вы будете перенаправлены на страницу с информацией</p>             
                 <img src="./assets/img/jpg/cross.jpg" alt="" class="popup__close" id='close'>
             </form>            
         </section>
         <section class="instruction">
             <div class="instruction__inner">
                 <p class="instruction__title">
-                    Краткая инструкция по требованиям, предъявляемым к оформлению з 
+                    Краткая инструкция по требованиям, предъявляемым к оформлению заявки на получение КИЗ:
                 </p>
                 <ol class="instruction__list">
                     <li class="instruction__item">1. Фото-файлов изделий должно быть столько, сколько строк в Инвойсе</li>
@@ -206,36 +207,36 @@
                     вашего заказа</span>
                 <form action="" class="calculatin__form calc">
                    <div class="calc__type">
-                       <span class="calc__title">1.Выберите тип изделия (один или несколько) и введите количество</span>
+                       <span class="calc__title">1.Выберите тип изделия (один или несколько) и введите количество:</span>
                        <ul class="calc__list">
                            <li class="calc__item">
                                <img src="./assets/img/jpg/shubu_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Шубы</span>
                                <input type="number" class="calc__inut-number" name='
-                               fur-coats' min="0" max="999">
+                               fur-coats' min="0" max="999" value="0">
                            </li>
                            <li class="calc__item">
                                <img src="./assets/img/jpg/dublenki_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Дубленки</span>
                                <input type="number" class="calc__inut-number" name='
-                               sheepskin-coats' min="0" max="999">
+                               sheepskin-coats' min="0" max="999" value="0">
                            </li>
                            <li class="calc__item">
                                <img src="./assets/img/jpg/jiletu_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Меховые желеты</span>
-                               <input type="number" class="calc__inut-number" name='fur-vests' min="0" max="999">
+                               <input type="number" class="calc__inut-number" name='fur-vests' min="0" max="999" value="0">
                            </li>
                            <li class="calc__item">
                                <img src="./assets/img/jpg/palto_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Пальто с мехом</span>
-                               <input type="number" class="calc__inut-number" name='coat-with-fur' min="0" max="999">
+                               <input type="number" class="calc__inut-number" name='coat-with-fur' min="0" max="999" value="0">
                            </li>
                        </ul>
                    </div>
                    <div class="calc__weight">
                        <div class="calc__left">
-                        <span class="calc__title">2.Введите общий вес (если знаете)</span>
-                        <input type="text" class="calc__input" name='weight'>
+                        <span class="calc__title">2.Введите общий вес (если знаете):</span>
+                        <input type="number" class="calc__input" name='weight' value="0">
                        </div>
                        <div class="calc__right">
                         <span class="calc__title">3.Где необходимо забрать груз?</span>
@@ -257,7 +258,7 @@
                        <div class="calc__cost-wrap">
                         <div class="calc__wrap-radio">
                          <img src="./assets/img/png/manager_icon 1.png" alt="" class="calc__icon">
-                         <input id="radio-1" type="radio" class="calc__radio" name='messager' value='viber' checked>
+                         <input id="radio-1" type="radio" class="calc__radio" name='messager' value='viber'>
                          <label for="radio-1" class="calc__viber">
                          Звонок менеджера                     
                          </label>
@@ -277,7 +278,7 @@
                        <span class="calc__title">5.Введите ваш номер телефона:</span>
                        <div class="calc__wrap">
                            <input type="text" class="calc__input-phone" id="id-phone" name='phone'>
-                           <input type='submit' class="calc__btn btn" value='Забронировать скидку ›'>                        
+                           <input type='submit' class="calc__btn btn" value='Рассчитать стоимость доставки ›'>                        
                        </div>
                        <span class="calc__text">После расчета стоимости с вами свяжется наш менеджер по выбранному способу связи</span>
                    </div>
@@ -367,6 +368,9 @@
     <section class="question">
         <form class="question__inner">
             <p class="question__title">Вы можете задать  интересующий Вас вопрос</p>
+            <span class="question__subtitle">Введите ваш вопрос:</span>
+            <textarea class="question__textarea" name="question">                
+            </textarea>
             <span class="question__subtitle">Введите ваш номер телефона:</span>
             <input type="text" class="question__input" id="id-phone" name="phone">
             <input type="submit" class="question__btn btn" value='Задать вопрос'>
