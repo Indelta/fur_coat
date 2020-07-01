@@ -15,6 +15,17 @@ export default function showPopup () {
       popup.classList.add('active');
       disableScroll();
     })
+
+    window.addEventListener( 'scroll', (event) => {
+      console.log(pageYOffset);
+      if( pageYOffset > 850 ) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+      
+    })
+    
   })
   
 closeBtn.forEach( (el) => {
@@ -26,5 +37,7 @@ closeBtn.forEach( (el) => {
     enableScroll();
   })
 })
+
+
 
 }

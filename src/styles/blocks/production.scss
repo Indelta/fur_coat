@@ -14,8 +14,7 @@
   }
   
 
-  &__inner {
-    position: relative; 
+  &__inner {    
     padding: 53px 40px;
     background: url('../assets/img/jpg/2_bg\ 2.jpg') no-repeat center center / cover;
     border-radius: 20px;
@@ -74,8 +73,12 @@
   }
 
   &__stiker {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
     position: absolute;
-    right: 20px;
+    right: 30px;
     bottom: 50%;
     transform: translateY(50%);
     width: 130px;
@@ -85,33 +88,32 @@
     cursor: pointer;
     @include transition;
     z-index: 1;
+
+    @include mobile {
+      transform: scale(.6);  
+      right: -20px; 
+    }
     
     &:hover {
       opacity: .8;
     }
 
-    @include tablet-and-mobile {
-      right: 0;
-    }
+    &.active {
+      position: fixed;
+      right: 30px;
+      bottom: 50%;
 
-    @include mobile {
-
+      @include mobile {
+        padding: 10px;        
+        right: -20px;     
+        transform: scale(.6);  
+        bottom: 30%;
+      }
     }
   }
 }
 
 .stiker {
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-
-  @include mobile {
-    padding: 10px;
-    transform: scale(0.6);
-    right: -20px;
-    bottom: 0;
-  }
 
   &__text {
     margin-top: 10px;
