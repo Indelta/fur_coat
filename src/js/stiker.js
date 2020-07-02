@@ -23,8 +23,7 @@ export default function showPopup () {
         el.classList.remove('active');
       }
       
-    })
-    
+    })    
   })
   
 closeBtn.forEach( (el) => {

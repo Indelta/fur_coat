@@ -5,13 +5,19 @@ import formSender from './formSender';
 export default function discountForm (form) {
   const phone = form.querySelector('input[name="phone"]').value;
   const formData = new FormData(form);
+  const btnSubmit = document.querySelector('.present__btn');
+  const valueBtn = btnSubmit.value;
 
   if (!phone || phone.length < 1) {
     validForm(document.querySelector('.present__input'));
   } else {
+    btnSubmit.disabled = true;
+    btnSubmit.value = 'Отправка...';  
     formSender(formData, './send.php')
     .then((response) => {
-      console.log(response);
+      form.reset();
+      btnSubmit.disabled = false;
+      btnSubmit.value = valueBtn
       document.querySelector('.thankyou__subtitle').innerHTML = 'Скидка забронирована на ваш номер телефона на 3 месяца';
       showThankYou();
       disableScroll();
