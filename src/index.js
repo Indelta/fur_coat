@@ -11,6 +11,7 @@ import scrollManager from './js/scrollManager';
 import askQuestion from './js/question';
 import showDate from "./js/date";
 import Inputmask from "inputmask";
+import goal from "./js/goal";
 
 
 
@@ -21,6 +22,7 @@ import Inputmask from "inputmask";
 // import './js/scrollBlock';
 
 document.addEventListener('DOMContentLoaded', function() {
+  goal();
   showPopup();
   scrollManager();
   askQuestion();

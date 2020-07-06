@@ -23,6 +23,8 @@ export default function questionForm(form) {
           "С вами скоро свяжется наш менеджер";
         showThankYou();
         disableScroll();
+        ym(61473721, 'reachGoal', 'QuestionForm');
+        gtag('event', 'send', {'event_category': 'Event', 'event_action': 'Send', 'event_label': 'QuestionForm' });
       })
       .catch((er) => {
         console.log(er);

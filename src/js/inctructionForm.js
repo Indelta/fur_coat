@@ -20,7 +20,9 @@ export default function inctructionForm (form) {
     btnSubmit.disabled = false;
     btnSubmit.value = valueBtn
     popup.classList.remove('active');  
-    instruction.classList.add('active'); 
+    instruction.classList.add('active');
+    ym(61473721, 'reachGoal', 'KIZForm'); 
+    gtag('event', 'send', {'event_category': 'Event', 'event_action': 'Send', 'event_label': 'KIZForm' });
     })
     .catch((er) => {
       console.log(er)

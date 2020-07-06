@@ -27,6 +27,8 @@ export default function calcForm (form) {
       thankyouPage.classList.add('active');
       showThankYou();
       disableScroll();
+      ym(61473721, 'reachGoal', 'CalcForm');
+      gtag('event', 'send', {'event_category': 'Event', 'event_action': 'Send', 'event_label': 'CalcForm' });
     })
     .catch((er) => {
       console.log(er)

@@ -21,6 +21,8 @@ export default function discountForm (form) {
       document.querySelector('.thankyou__subtitle').innerHTML = 'Скидка забронирована на ваш номер телефона на 3 месяца';
       showThankYou();
       disableScroll();
+      ym(61473721, 'reachGoal', 'DiscontForm');
+      gtag('event', 'send', {'event_category': 'Event', 'event_action': 'Send', 'event_label': 'DiscontForm' });
     })
     .catch((er) => {
       console.log(er)
