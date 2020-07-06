@@ -12,14 +12,4 @@ export default function askQuestion() {
       disableScroll();
     })
   })
-
-  headIcons.forEach((el) => {
-    el.addEventListener('click', (event) => {
-      console.log(1)
-      event.preventDefault();
-      questionPopup.classList.add('active');
-      document.querySelector('.question__textarea').focus();
-      disableScroll(); 
-    })
-  })
 }
