@@ -12,7 +12,7 @@ export default function calcForm (form) {
     console.log(pair[0]+ ', ' + pair[1]); 
 }
 
-  if (!phone || phone.length < 1) {
+  if (!phone || phone.length < 10) {
     validForm(document.querySelector('.calc__input-phone'));
   } else {
     btnSubmit.disabled = true;
@@ -27,7 +27,7 @@ export default function calcForm (form) {
       thankyouPage.classList.add('active');
       showThankYou();
       disableScroll();
-      ym(61473721, 'reachGoal', 'CalcForm');
+      ym(65411236, 'reachGoal', 'CalcForm');
       gtag('event', 'send', {'event_category': 'Event', 'event_action': 'Send', 'event_label': 'CalcForm' });
     })
     .catch((er) => {

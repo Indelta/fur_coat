@@ -116,7 +116,7 @@
 .header {
   position: relative;
   background: url('../assets/img/jpg/girl_2\ 1.png') bottom right no-repeat,
-              url('../assets/img/jpg/1_bg\ 1.jpg') no-repeat;
+              url('../assets/img/jpg/1_bg\ 1.jpg') no-repeat top center / cover;
 
 
   @include mobile {

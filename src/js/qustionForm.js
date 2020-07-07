@@ -8,7 +8,7 @@ export default function questionForm(form) {
   const btnSubmit = document.querySelector(".question__btn");
   const valueBtn = btnSubmit.value;
 
-  if (!phone || phone.length < 1) {
+  if (!phone || phone.length < 10) {
     validForm(document.querySelector(".question__input"));
   } else {
     btnSubmit.disabled = true;
@@ -23,7 +23,7 @@ export default function questionForm(form) {
           "С вами скоро свяжется наш менеджер";
         showThankYou();
         disableScroll();
-        ym(61473721, 'reachGoal', 'QuestionForm');
+        ym(65411236, 'reachGoal', 'QuestionForm');
         gtag('event', 'send', {'event_category': 'Event', 'event_action': 'Send', 'event_label': 'QuestionForm' });
       })
       .catch((er) => {

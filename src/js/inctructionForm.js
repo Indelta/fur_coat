@@ -9,7 +9,7 @@ export default function inctructionForm (form) {
   const valueBtn = btnSubmit.value;
 
 
-  if (!phone || phone.length < 1) {
+  if (!phone || phone.length < 10) {
     validForm(document.querySelector('.popup__input-phone'));
   } else {
     btnSubmit.disabled = true;
@@ -21,7 +21,7 @@ export default function inctructionForm (form) {
     btnSubmit.value = valueBtn
     popup.classList.remove('active');  
     instruction.classList.add('active');
-    ym(61473721, 'reachGoal', 'KIZForm'); 
+    ym(65411236, 'reachGoal', 'KIZForm'); 
     gtag('event', 'send', {'event_category': 'Event', 'event_action': 'Send', 'event_label': 'KIZForm' });
     })
     .catch((er) => {

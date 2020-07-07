@@ -2,6 +2,7 @@ import * as $ from 'jquery';
 import './styles/main.scss';
 import Swiper from 'swiper';
 import AOS from 'aos';
+import Iti from "intl-tel-input";
 import showPopup from './js/stiker';
 import instructionForm from './js/inctructionForm';
 import discountForm  from './js/discountForm';
@@ -9,9 +10,9 @@ import calcForm  from './js/calcForm';
 import questionForm from './js/qustionForm';
 import scrollManager from './js/scrollManager';
 import askQuestion from './js/question';
-import showDate from "./js/date";
-import Inputmask from "inputmask";
+// import showDate from "./js/date";
 import goal from "./js/goal";
+import utils from "./js/utils";
 
 
 
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
   showPopup();
   scrollManager();
   askQuestion();
-  showDate();
+  // showDate();
 
   document.querySelector('.popup__btn').addEventListener('click', (e) => {
     console.log(1);
@@ -87,8 +88,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const inputs = document.querySelectorAll("#id-phone");
-    const im = new Inputmask({ mask: "+9 (999) 999-99-99[9]", clearMaskOnLostFocus: false });
-    im.mask(inputs); 
+
+    inputs.forEach((el) => {
+      var iti = new Iti(el, {
+        preferredCountries: ["ru", "by"],
+        allowExtensions: true,
+        autoFormat: false,
+        autoHideDialCode: false,
+        autoPlaceholder: false,
+        defaultCountry: "auto",
+        ipinfoToken: "yolo",
+        nationalMode: false,
+        numberType: "MOBILE",
+        preventInvalidNumbers: true,
+        utilsScript: utils,
+      });
+  
+      iti._init();
+    })
+
+    // const inputs = document.querySelectorAll("#id-phone");
+    // const im = new Inputmask({ mask: "+9 (999) 999-99-99[9]", clearMaskOnLostFocus: false });
+    // im.mask(inputs); 
  }, false);
 
 

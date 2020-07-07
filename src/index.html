@@ -18,18 +18,18 @@
                     <div class="head__right">
                         <ul class="head__social">
                             <li class="head__link">
-                                <a href="whatsapp://tel:3216541234" class="head__whatsApp">
+                                <a href="whatsapp://tel:74952780921" class="head__whatsApp">
                                     <img src="./assets/img/svg/whatsapp-green.svg" alt="" class="head__ico">
                                 </a>
                             </li>
                             <li class="head__link">
-                                <a href="viber://add?number=120345678910" class="head__viber">
+                                <a href="viber://add?number=74952780921" class="head__viber">
                                     <img src="./assets/img/svg/Viber_icon.svg" alt="" class="head__ico">
                                 </a>
                             </li>
                         </ul>
                         <div class="head__contact">
-                            <a href="tel:+7 123 456 78" class="head__phone">+7 123 456 78</a>
+                            <a href="tel:+74952780921" class="head__phone">+7 495 278 09 21</a>
                             <button class="head__btn btn" id='question'>Задать вопрос</button>
                         </div>
                     </div>
@@ -47,16 +47,21 @@
                         <li class="intro__item">Несем финансовые гарантии</li>
                     </ul>
                     <form action="" class="intro__form present" id='sale'>
-                        <span class="present__title">Дарим скидку 30$ на первый заказ</span>
-                        <p class="present__desc">Скидка будет забранирована на ваш номер телефона (действительна в течении 3 месяцев)</p>
+                        <span class="present__title">Выгодные условия доставки изделий</span>
+                        <div class="present__desc">
+                            <p class="present__weight">Вес больше - стоимость меньше</p>
+                            <p class="present__terms">Узнать условия доставки</p>
+                        </div>
                         <span class="present__subtitle">Введите ваш номер телефона:</span>
-                        <input type="text" class="present__input" id="id-phone" name="phone">
-                        <input type='submit' class="present__btn btn" value='Забронировать скидку &#8250;'>
-                        <p class="present__text">Скидка действует при общей сумме заказа от 200$</p>
-                        <div class="present__until">  
+                        <div class="present__wrap">
+                            <input type="text" class="present__input" id="id-phone" name="phone">
+                        </div>
+                        <input type='submit' class="present__btn btn" value='Условия доставки &#8250;'>
+                        <p class="present__text">Менеджер свяжется с вами <br><span>в рабочее время</span></p>
+                        <!-- <div class="present__until">  
                             <span class="present__until-text">Только до </span>
                             <span class="present__until-date"></span>                          
-                        </div>
+                        </div> -->
                     </form>
                     <img src="./assets/img/png/1_girl 1.png" alt="" class="intro__img">
                 </div>
@@ -104,7 +109,9 @@
                 <p class="popup__title">Получите подробную инструкцию
                     по подготовке информации для КИЗ</p>
                 <span class="popup__label">Введите Ваш номер телефона:</span>
+                <div class="popup__wrap">
                 <input type="text" class="popup__input-phone" name='phone' id="id-phone">
+                </div>
                 <input class="popup__btn btn" type='submit' value='Получить инструкцию ›'>   
                 <p class="popup__text">Вы будете перенаправлены на страницу с информацией</p>             
                 <img src="./assets/img/jpg/cross.jpg" alt="" class="popup__close" id='close'>
@@ -138,7 +145,7 @@
                         <span class="desc__number">1</span>
                         <div class="desc__item-right">
                             <span class="desc__subtitle">Не срываем сроки	</span>
-                            <p class="desc__text">Доставка меховых изделий – одно из множества направлений нашей компании. 5-ти летний опыт в сфере грузоперевозок позволяет нам давать гарантию сроков доставки – <span>вы получите свой товар через 3-5 дней после заключения договора с нами</span></p>
+                            <p class="desc__text">Доставка меховых изделий – одно из множества направлений нашей компании. 5-ти летний опыт в сфере грузоперевозок позволяет нам давать гарантию сроков доставки – <span>вы получите свой товар быстро и без задержек</span></p>
                         </div>
                         
                     </li>
@@ -212,14 +219,12 @@
                            <li class="calc__item">
                                <img src="./assets/img/jpg/shubu_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Шубы</span>
-                               <input type="number" class="calc__inut-number" name='
-                               shuby' min="0" max="999" value="0">
+                               <input type="number" class="calc__inut-number" name='shuby' min="0" max="999" value="0">
                            </li>
                            <li class="calc__item">
                                <img src="./assets/img/jpg/dublenki_icon 1.jpg" alt="" class="calc__img">
                                <span class="calc__info">Дубленки</span>
-                               <input type="number" class="calc__inut-number" name='
-                               dublenki' min="0" max="999" value="0">
+                               <input type="number" class="calc__inut-number" name='dublenki' min="0" max="999" value="0">
                            </li>
                            <li class="calc__item">
                                <img src="./assets/img/jpg/jiletu_icon 1.jpg" alt="" class="calc__img">
@@ -299,7 +304,7 @@
                     </li>
                     <li class="comfort__item">
                         <img src="./assets/img/png/3 1.png" alt="" class="comfort__img">
-                        <p class="comfort__text">Мы готовим окументы для присвоения КИЗа каждой единице вашего товара
+                        <p class="comfort__text">Мы готовим документы для присвоения КИЗа каждой единице вашего товара
                         </p>
                     </li>
                     <li class="comfort__item">
@@ -316,7 +321,7 @@
                     </li>
                 </ul>
                 <button class="comfort__btn btn" data-scroll='calculation'>Рассчитать стоимость доставки</button>
-                <a href="" class="comfort__link" data-scroll='sale'>Получить скидку 30$ на доставку</a>
+                <a href="" class="comfort__link" data-scroll='sale'>Узнать условия доставки</a>
             </div>
         </section>
         <section class="contacts">
@@ -324,9 +329,9 @@
                 <span class="contacts__title title">Наши контакты</span>
                 <div class="contacts__wrapper">
                     <div class="contacts__left">
-                        <p class="contacts__text"> <span>Склад: </span>пересечение Киевского шоссе и МКАД (43-ий
+                        <p class="contacts__text"> <span>Склад: </span> Пересечение Киевского шоссе и МКАД (43-ий
                             км). Посёлок Мосрентген, логистический центр "Славянский мир"</p>
-                        <p class="contacts__text"><span>Точка выгрузки: </span>55.625221, 37.459090</p>
+                        <p class="contacts__text"><span>Точка выгрузки: </span>55.622522, 37.453824</p>
                         <p class="contacts__text"><span>Точка въезда со стороны Киевского шоссе: </span> 55.620358,
                             37.454470</p>
                     </div>
@@ -352,7 +357,7 @@
                     <span>вверх</span>
                 </div>
                 <div class="footer__contacts">
-                    <a href="tel:+7 123 456 78" class="footer__phone">+7 123 456 78</a>
+                    <a href="tel:+74952780921" class="footer__phone">+7 495 278 09 21</a>
                     <button class="footer__btn btn" id='question'>Задать вопрос</button>
                 </div>
             </div>

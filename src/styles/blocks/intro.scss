@@ -97,7 +97,7 @@
 
   &__img {
     position: absolute;
-    top: -85px;
+    top: -47px;
     left: -420px;
     z-index: -1;
 
@@ -124,7 +124,7 @@
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.45);
 
   @include mobile {
-    padding: 15px 0 60px;
+    padding: 15px 0 15px;
   }
 
   &__title {
@@ -140,23 +140,58 @@
     }
   }
 
+  &__wrap {
+    width: 262px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
   &__desc {
-    padding: 8px 35px;
-    background: rgba(15, 117, 188, 0.7);
+    margin-top: 10px;
+    position: relative;
+    padding: 10px 35px;
+    background: white;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
     color: #FFFFFF;
 
-    @include mobile {
-      font-size: 12px;
+    &:after {
+      content: '';
+      position: absolute;
+      @include triangle(30px, down, white);
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
     }
+
+    @include mobile {
+      padding: 10px 20px;
+      font-size: 12px;
+    }    
+  }
+
+  &__weight {
+    color: #0e77c0;
+    font-size: 24px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__terms {
+    display: block;
+    margin-top: 10px;
+    color: #3b4851;
+    font-size: 18px;
   }
 
   &__subtitle {
     display: block;
-    margin-top: 16px;
+    margin-top: 32px;
     text-align: center;
     font-weight: bold;
     font-size: 17px;
@@ -172,7 +207,6 @@
     height: 46px;    
     margin: 5px auto 0;
     border-radius: 30px;
-    text-align: center;
   }
 
   &__btn {
@@ -190,6 +224,10 @@
     line-height: 140%;
     text-align: center;
     color: #FFFFFF;
+
+    span {
+      font-weight: 800;
+    }
   }
 
   &__until {

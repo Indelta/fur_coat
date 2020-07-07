@@ -8,7 +8,7 @@ export default function discountForm (form) {
   const btnSubmit = document.querySelector('.present__btn');
   const valueBtn = btnSubmit.value;
 
-  if (!phone || phone.length < 1) {
+  if (!phone || phone.length < 10) {
     validForm(document.querySelector('.present__input'));
   } else {
     btnSubmit.disabled = true;
@@ -21,7 +21,7 @@ export default function discountForm (form) {
       document.querySelector('.thankyou__subtitle').innerHTML = 'Скидка забронирована на ваш номер телефона на 3 месяца';
       showThankYou();
       disableScroll();
-      ym(61473721, 'reachGoal', 'DiscontForm');
+      ym(65411236, 'reachGoal', 'DiscontForm');
       gtag('event', 'send', {'event_category': 'Event', 'event_action': 'Send', 'event_label': 'DiscontForm' });
     })
     .catch((er) => {

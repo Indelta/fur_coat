@@ -1,25 +1,25 @@
 <?php
 
-  $name = isset($_POST['name']) ? $_POST['name'] : '';
   $phone = isset($_POST['phone']) ? preg_replace("/[^0-9]/", "", $_POST['phone']) : 0;
-  $products = isset($_POST['products']) ? $_POST['products'] : '';
+  $shuby = isset($_POST['shuby']) ? $_POST['shuby'] : '';
+  $dublenki = isset($_POST['dublenki']) ? $_POST['dublenki'] : '';
+  $mekhovyeZhelety = isset($_POST['mekhovye-zhelety']) ? $_POST['mekhovye-zhelety'] : '';
+  $paltoSMekhom = isset($_POST['palto-s-mekhom']) ? $_POST['palto-s-mekhom'] : '';
   $weight = isset($_POST['weight']) ? $_POST['weight'] : '';
-  $countries = isset($_POST['countries']) ? $_POST['countries'] : '';
-  $instagram = isset($_POST['instagram']) ? $_POST['instagram'] : '';
-  $whatsApp = isset($_POST['whatsApp']) ? $_POST['whatsApp'] : '';
-  $email = isset($_POST['email']) ? $_POST['email'] : '';
+  $adress = isset($_POST['adress']) ? $_POST['adress'] : '';
+  $messager = isset($_POST['messager']) ? $_POST['messager'] : '';
 
   $mes = '';
   if (!$phone) exit("Error! Phone is a required field");
   else {
-    $mes = "<p>Имя: $name</p>";
     $mes .= "<p>Телефон: $phone</p>";
-    $mes .= "<p>products: $products</p>";
-    $mes .= "<p>weight: $weight</p>";
-    $mes .= "<p>countries: $countries</p>";
-    $mes .= "<p>instagram: $instagram</p>";
-    $mes .= "<p>whatsApp: $whatsApp</p>";
-    $mes .= "<p>email: $email</p>";
+    $mes .= "<p>Шубы: $shuby</p>";
+    $mes .= "<p>Дубленки: $dublenki</p>";
+    $mes .= "<p>Меховые желеты: $mekhovyeZhelety</p>";
+    $mes .= "<p>Пальто с мехом: $paltoSMekhom</p>";
+    $mes .= "<p>Вес: $weight</p>";
+    $mes .= "<p>Адрес: $adress</p>";
+    $mes .= "<p>Мессаджер: $messager</p>";
  
     $to = "deltaplanirovanie@gmail.com, deltastream.dev@gmail.com, manager.deltaplan@gmail.com";
     $sub = "=?utf-8?B?" . base64_encode("Заявка с bel-cargo.ru") . '?=';
