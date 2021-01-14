@@ -15,8 +15,12 @@
                         <img src="./assets/img/png/work_icon 1.png" alt="" class="head__img">
                         <span class="head__text">Работаем без посредников</span>
                     </div>
+                    <div class="head__instagram">
+                        <a href="https://www.instagram.com/cargo_buyer/?igshid=1v4oo3ilw004p" class="head__link-insta">Instagram Direct</a>
+                        <img src="./assets/img/svg/Insta_arrow.svg" alt="instagram" class="head__logo-insta">                        
+                    </div>
                     <div class="head__right">
-                        <ul class="head__social">
+                        <!-- <ul class="head__social">
                             <li class="head__link">
                                 <a href="whatsapp://tel:74952780921" class="head__whatsApp">
                                     <img src="./assets/img/svg/whatsapp-green.svg" alt="" class="head__ico">
@@ -27,7 +31,7 @@
                                     <img src="./assets/img/svg/Viber_icon.svg" alt="" class="head__ico">
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                         <div class="head__contact">
                             <a href="tel:+74952780921" class="head__phone">+7 495 278 09 21</a>
                             <button class="head__btn btn" id='question'>Задать вопрос</button>
@@ -46,7 +50,7 @@
                         <li class="intro__item">Присваиваем КИЗ</li>
                         <li class="intro__item">Несем финансовые гарантии</li>
                     </ul>
-                    <form action="" class="intro__form present" id='sale'>
+                    <form action="" class="intro__form present" id='present'>
                         <span class="present__title">Выгодные условия доставки изделий</span>
                         <div class="present__desc">
                             <p class="present__weight">Вес больше - стоимость меньше</p>
@@ -54,7 +58,7 @@
                         </div>
                         <span class="present__subtitle">Введите ваш номер телефона:</span>
                         <div class="present__wrap">
-                            <input type="text" class="present__input" id="id-phone" name="phone">
+                            <input type="text" class="present__input" id="id-phone" name="phone" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                         </div>
                         <input type='submit' class="present__btn btn" value='Условия доставки &#8250;'>
                         <p class="present__text">Менеджер свяжется с вами <br><span>в рабочее время</span></p>
@@ -62,6 +66,12 @@
                             <span class="present__until-text">Только до </span>
                             <span class="present__until-date"></span>                          
                         </div> -->
+                        <input type="hidden" name="type" value="" />
+                        <input type="hidden" name="utm_term" value="" />
+                        <input type="hidden" name="utm_source" value="" />
+                        <input type="hidden" name="utm_medium" value="" />
+                        <input type="hidden" name="utm_campaign" value="" />
+                        <input type="hidden" name="utm_content" value="" />
                     </form>
                     <img src="./assets/img/png/1_girl 1.png" alt="" class="intro__img">
                 </div>
@@ -105,16 +115,22 @@
             </div>
         </section>
         <section class="popup">
-            <form class="popup__inner">
+            <form class="popup__inner" id="popup__inner">
                 <p class="popup__title">Получите подробную инструкцию
                     по подготовке информации для КИЗ</p>
                 <span class="popup__label">Введите Ваш номер телефона:</span>
                 <div class="popup__wrap">
-                <input type="text" class="popup__input-phone" name='phone' id="id-phone">
+                <input type="text" class="popup__input-phone" name='phone' id="id-phone" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                 </div>
                 <input class="popup__btn btn" type='submit' value='Получить инструкцию ›'>   
                 <p class="popup__text">Вы будете перенаправлены на страницу с информацией</p>             
                 <img src="./assets/img/jpg/cross.jpg" alt="" class="popup__close" id='close'>
+                <input type="hidden" name="type" value="" />
+                <input type="hidden" name="utm_term" value="" />
+                <input type="hidden" name="utm_source" value="" />
+                <input type="hidden" name="utm_medium" value="" />
+                <input type="hidden" name="utm_campaign" value="" />
+                <input type="hidden" name="utm_content" value="" />
             </form>            
         </section>
         <section class="instruction">
@@ -212,7 +228,7 @@
             <div class="container">
                 <span class="calculatin__title title">Рассчитайте стоимость доставки <br>
                     вашего заказа</span>
-                <form action="" class="calculatin__form calc">
+                <form action="" class="calculatin__form calc" id="calc">
                    <div class="calc__type">
                        <span class="calc__title">1.Выберите тип изделия (один или несколько) и введите количество:</span>
                        <ul class="calc__list">
@@ -282,11 +298,17 @@
                    <div class="calc__phone">
                        <span class="calc__title">5.Введите ваш номер телефона:</span>
                        <div class="calc__wrap">
-                           <input type="text" class="calc__input-phone" id="id-phone" name='phone'>
+                           <input type="text" class="calc__input-phone" id="id-phone" name='phone' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                            <input type='submit' class="calc__btn btn" value='Рассчитать стоимость доставки ›'>                        
                        </div>
                        <span class="calc__text">После расчета стоимости с вами свяжется наш менеджер по выбранному способу связи</span>
                    </div>
+                   <input type="hidden" name="type" value="" />
+                   <input type="hidden" name="utm_term" value="" />
+                   <input type="hidden" name="utm_source" value="" />
+                   <input type="hidden" name="utm_medium" value="" />
+                   <input type="hidden" name="utm_campaign" value="" />
+                   <input type="hidden" name="utm_content" value="" />
                 </form>
             </div>
         </section>
@@ -321,7 +343,7 @@
                     </li>
                 </ul>
                 <button class="comfort__btn btn" data-scroll='calculation'>Рассчитать стоимость доставки</button>
-                <a href="" class="comfort__link" data-scroll='sale'>Узнать условия доставки</a>
+                <a href="" class="comfort__link" data-scroll='present'>Узнать условия доставки</a>
             </div>
         </section>
         <section class="contacts">
@@ -331,9 +353,8 @@
                     <div class="contacts__left">
                         <p class="contacts__text"> <span>Склад: </span> Пересечение Киевского шоссе и МКАД (43-ий
                             км). Посёлок Мосрентген, логистический центр "Славянский мир"</p>
-                        <p class="contacts__text"><span>Точка выгрузки: </span>55.622522, 37.453824</p>
-                        <p class="contacts__text"><span>Точка въезда со стороны Киевского шоссе: </span> 55.620358,
-                            37.454470</p>
+                        <p class="contacts__text"><span>Точка выгрузки: </span>55.625221, 37.459090</p>
+                        <p class="contacts__text"><span>Точка въезда со стороны Киевского шоссе: </span> 55.622522, 37.453824</p>
                     </div>
                     <ul class="contacts__right">
                         <li class="contacts__item"><span>Доставка и выдача:</span> ежедневно </li>
@@ -371,15 +392,21 @@
         </div>
     </section>
     <section class="question">
-        <form class="question__inner">
+        <form class="question__inner" id="question__inner">
             <p class="question__title">Вы можете задать  интересующий Вас вопрос</p>
             <span class="question__subtitle">Введите ваш вопрос:</span>
             <textarea class="question__textarea" name="question">                
             </textarea>
             <span class="question__subtitle">Введите ваш номер телефона:</span>
-            <input type="text" class="question__input" id="id-phone" name="phone">
+            <input type="text" class="question__input" id="id-phone" name="phone" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
             <input type="submit" class="question__btn btn" value='Задать вопрос'>
             <img src="./assets/img/jpg/cross.jpg" alt="" class="question__close" id='close'>
+            <input type="hidden" name="type" value="" />
+            <input type="hidden" name="utm_term" value="" />
+            <input type="hidden" name="utm_source" value="" />
+            <input type="hidden" name="utm_medium" value="" />
+            <input type="hidden" name="utm_campaign" value="" />
+            <input type="hidden" name="utm_content" value="" />
         </form>
     </section>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -407,5 +434,23 @@
  </script>
  <noscript><div><img src="https://mc.yandex.ru/watch/65411236" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
+ <script src='https://zenconnector.ru/js/connector.js' data-zentoken='YmVsY2FyZ28tZnVyLnJ1OjE5'></script>
+ <!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '532648660776859');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=532648660776859&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->    
 </body>
 </html>

@@ -3,6 +3,7 @@
 
   @include mobile {
     padding-top: 30px;
+    z-index: 1;
   }
 
   &__inner {
@@ -28,6 +29,42 @@
     }
   }
 
+  &__instagram {
+    display: flex;    
+    height: 20px;
+
+    @include mobile {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -65px;
+      width: 170px;
+      z-index: 0;
+      
+    }
+  }
+
+  &__link-insta {
+    margin-top: 3px;
+    padding-right: 5px;
+    color: #0f75bc;
+    font-size: 18px;
+    @include transition;
+    height: auto;
+    
+
+    &:hover {
+      opacity: .8;
+      text-decoration: underline;
+    }
+  }
+
+  &__logo-insta {
+    width: 20px;
+    height: 20px;
+    stroke: #0f75bc;
+  }
+
   &__img {
     width: 36px;
     height: 34px;
@@ -49,7 +86,7 @@
     @include mobile {
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -25px;
     }
   }
 
@@ -103,7 +140,7 @@
     color: #000000;
 
     @include mobile {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 24px;
     }
   }

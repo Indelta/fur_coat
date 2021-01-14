@@ -18,7 +18,7 @@ export default function discountForm (form) {
       form.reset();
       btnSubmit.disabled = false;
       btnSubmit.value = valueBtn
-      document.querySelector('.thankyou__subtitle').innerHTML = 'Скидка забронирована на ваш номер телефона на 3 месяца';
+      // document.querySelector('.thankyou__subtitle').innerHTML = 'Скидка забронирована на ваш номер телефона на 3 месяца';
       showThankYou();
       disableScroll();
       ym(65411236, 'reachGoal', 'DiscontForm');

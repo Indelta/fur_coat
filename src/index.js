@@ -14,8 +14,6 @@ import askQuestion from './js/question';
 import goal from "./js/goal";
 import utils from "./js/utils";
 
-
-
 // import './js/header.js';
 // import './js/mobile-menu.js';
 // import './js/scroll.js';
@@ -29,25 +27,31 @@ document.addEventListener('DOMContentLoaded', function() {
   askQuestion();
   // showDate();
 
-  document.querySelector('.popup__btn').addEventListener('click', (e) => {
-    console.log(1);
+  const params = new URLSearchParams(window.location.search);
+  $('input[name="utm_term"]').val(params.get("utm_term"));
+  $('input[name="utm_source"]').val(params.get("utm_source"));
+  $('input[name="utm_medium"]').val(params.get("utm_medium"));
+  $('input[name="utm_campaign"]').val(params.get("utm_campaign"));
+  $('input[name="utm_content"]').val(params.get("utm_content"));
+
+  document.querySelector('#popup__inner').addEventListener('submit', (e) => {
     e.preventDefault();
-    instructionForm(document.querySelector('.popup__inner'));
+    instructionForm(document.querySelector('#popup__inner'));
   });
 
-  document.querySelector('.present__btn').addEventListener('click', (e) => {
+  document.querySelector('#present').addEventListener('submit', (e) => {
     e.preventDefault();
-    discountForm(document.querySelector('.present'));
+    discountForm(document.querySelector('#present'));
   });
 
-  document.querySelector('.calc__btn').addEventListener('click', (e) => {
+  document.querySelector('#calc').addEventListener('submit', (e) => {
     e.preventDefault();
-    calcForm(document.querySelector('.calc'));
+    calcForm(document.querySelector('#calc'));
   });
 
-  document.querySelector('.question__btn').addEventListener('click', (e) => {
+  document.querySelector('#question__inner').addEventListener('submit', (e) => {
     e.preventDefault();
-    questionForm(document.querySelector('.question__inner'));
+    questionForm(document.querySelector('#question__inner'));
   });
 
   const mySwiper = new Swiper(".swiper-container", {

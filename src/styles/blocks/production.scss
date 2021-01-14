@@ -90,7 +90,10 @@
 
     @include mobile {
       transform: scale(.6);  
-      right: -20px; 
+      right: -18px; 
+      width: 90px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
     
     &:hover {

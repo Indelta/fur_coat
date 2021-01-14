@@ -114,6 +114,7 @@ module.exports = {
       minify: {
         collapseWhitespace: isProd,
       },
+      favicon: './favicon.ico'
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
@@ -125,6 +126,10 @@ module.exports = {
         from: path.resolve(__dirname, "src/send.php"),
         to: path.resolve(__dirname, "dist/"),
       },
+      {
+        from: path.resolve(__dirname, "src/leads.php"),
+        to: path.resolve(__dirname, "dist/"),
+      }
     ]),
     new MiniCssExtractPlugin({
       filename: filename("css"),
